@@ -28,9 +28,9 @@ imgarr = numpy.array(img)
 print(imgarr[0][0])
 #Picture is 940x1260. Each number in imgarr is a pixel
 print("Columnns: ", len(imgarr[0]))
-cols = len(imgarr[0])-1
+cols = len(imgarr[0])
 print("Rows: ", len(imgarr))
-rows = len(imgarr)-1
+rows = len(imgarr)
 
 #Plan is to ask a number for how many pixels to combine ex. 20x20 pixelation
 #Then find the prominent colour for each area and replace all the pixels of that area with that
@@ -56,5 +56,7 @@ for line in range(0,rows-1,area): #for line=0;line<rows;line=line+area
                 pixarr[i][j] = dom[0]
                 #print("pixar[",i,"][",j,"]=", pixarr[i][j])
 
-for i in range()
-#img = Image.fromarray(pixarr, 'RGB')
+
+img = Image.fromarray(pixarr, 'RGB')
+img.save('my.png')
+img.show()
